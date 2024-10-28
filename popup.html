@@ -1,115 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
     body {
       width: 380px;
       padding: 20px;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #1a1a1a;
+      background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
       color: #ffffff;
     }
+
     .container {
-      background: #2d2d2d;
-      padding: 20px;
-      border-radius: 15px;
+      background: rgba(45, 45, 45, 0.95);
+      padding: 25px;
+      border-radius: 20px;
       box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
+
     h2 {
-      margin: 0 0 20px 0;
-      font-size: 24px;
+      margin: 0 0 25px 0;
+      font-size: 28px;
+      font-weight: 600;
       text-align: center;
       color: #4CAF50;
+      letter-spacing: 0.5px;
     }
+
     .form-group {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
+
     label {
       display: block;
       margin-bottom: 8px;
-      color: #cccccc;
+      color: #e0e0e0;
+      font-weight: 500;
+      font-size: 14px;
     }
+
     input, textarea {
       width: 100%;
-      padding: 10px;
-      border: none;
-      border-radius: 8px;
+      padding: 12px;
+      border: 2px solid transparent;
+      border-radius: 12px;
       background: #404040;
       color: #ffffff;
       font-size: 14px;
       margin-bottom: 10px;
-      box-sizing: border-box;
+      transition: all 0.3s ease;
     }
+
     input:focus, textarea:focus {
       outline: none;
+      border-color: #4CAF50;
       background: #4d4d4d;
-      box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+      box-shadow: 0 0 10px rgba(76, 175, 80, 0.2);
     }
+
     button {
       width: 100%;
-      padding: 12px;
+      padding: 14px;
       border: none;
-      border-radius: 8px;
-      background: #4CAF50;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #4CAF50, #45a049);
       color: white;
       font-size: 16px;
+      font-weight: 500;
       cursor: pointer;
       transition: all 0.3s ease;
     }
+
     button:hover {
-      background: #45a049;
+      background: linear-gradient(135deg, #45a049, #3d8b40);
       transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
     }
+
     .tasks-container {
-      margin-top: 20px;
+      margin-top: 25px;
       max-height: 300px;
       overflow-y: auto;
+      padding-right: 5px;
     }
+
     .task-item {
-      background: #404040;
-      padding: 15px;
-      border-radius: 8px;
-      margin-bottom: 10px;
+      background: linear-gradient(135deg, #404040, #363636);
+      padding: 18px;
+      border-radius: 12px;
+      margin-bottom: 12px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease;
     }
+
+    .task-item:hover {
+      transform: translateY(-2px);
+    }
+
     .task-info {
       flex-grow: 1;
     }
+
     .task-title {
-      font-weight: bold;
+      font-weight: 600;
       color: #ffffff;
       margin-bottom: 5px;
+      font-size: 15px;
     }
+
     .task-time {
-      color: #999999;
-      font-size: 12px;
+      color: #b0b0b0;
+      font-size: 13px;
+      font-weight: 400;
     }
+
     .delete-btn {
-      background: #ff4444;
+      background: linear-gradient(135deg, #ff4444, #cc0000);
       color: white;
       border: none;
-      border-radius: 4px;
-      padding: 5px 10px;
+      border-radius: 8px;
+      padding: 8px 15px;
       cursor: pointer;
-      margin-left: 10px;
+      margin-left: 15px;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.3s ease;
     }
+
     .delete-btn:hover {
-      background: #cc0000;
+      background: linear-gradient(135deg, #cc0000, #b30000);
+      transform: translateY(-1px);
     }
-    /* Scrollbar styling */
+
     ::-webkit-scrollbar {
       width: 8px;
     }
+
     ::-webkit-scrollbar-track {
       background: #2d2d2d;
+      border-radius: 4px;
     }
+
     ::-webkit-scrollbar-thumb {
       background: #4d4d4d;
       border-radius: 4px;
     }
+
     ::-webkit-scrollbar-thumb:hover {
       background: #5d5d5d;
     }
