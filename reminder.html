@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #1a1a1a;
+      color: white;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .reminder-container {
+      background: #2d2d2d;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+      text-align: center;
+      animation: fadeIn 0.5s ease;
+    }
+    .task-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #4CAF50;
+    }
+    .task-time {
+      font-size: 36px;
+      margin: 20px 0;
+      font-weight: bold;
+    }
+    .task-description {
+      color: #cccccc;
+      margin: 15px 0;
+    }
+    .close-btn {
+      background: #ff4444;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+    .close-btn:hover {
+      background: #cc0000;
+      transform: translateY(-2px);
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="reminder-container">
+    <div class="task-title" id="taskTitle">Task Title</div>
+    <div class="task-time" id="taskTime">00:00</div>
+    <div class="task-description" id="taskDescription">Task Description</div>
+    <button class="close-btn" id="closeButton">Close</button>
+  </div>
+  <script src="reminder.js"></script>
+</body>
+</html>

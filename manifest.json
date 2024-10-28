@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Task Scheduler",
+    "version": "1.0",
+    "description": "Schedule tasks with dark themed reminders",
+    "permissions": ["alarms", "storage", "notifications"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "web_accessible_resources": [{
+      "resources": ["reminder.html"],
+      "matches": ["<all_urls>"]
+    }],
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+  }
+  
