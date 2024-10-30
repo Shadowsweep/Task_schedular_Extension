@@ -17,8 +17,7 @@ In upcoming posts, I’ll be sharing more about other productivity-enhancing ext
 4. **Done!** Start setting reminders and stay on top of your tasks.
 
 ## GitHub Repository
-Find the latest version of **Tasks Alert Maker** on GitHub: [Tasks Alert Maker GitHub Link](https://lnkd.in/d6DdgFEQ)
-
+Find the latest version of **Tasks Alert Maker** on GitHub: https://github.com/Shadowsweep/Task_schedular_Extension
 ## Feedback
 I’d love to hear your thoughts! Please let me know if you find this extension useful and if you have any suggestions for improvements.
 
